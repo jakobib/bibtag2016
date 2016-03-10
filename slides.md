@@ -6,7 +6,9 @@ place: Bibliothekskongress, Leipzig
 institute: Verbunzentrale des GBV (VZG)
 ...
 
-# Begriffsklärung
+# Grundlagen
+
+## Begriffsklärung
 
 Normdaten
   : System aus Begriffen zur Wissensorganisation
@@ -19,42 +21,83 @@ Dienst
     definierte Schnittstelle zur Verfügung stellt
 
 
-# Normdaten basieren auf Begriffsklärungen
+## Normdaten basieren auf Begriffsklärungen
 
 Benennung            Identifier (hier: GND- und Wikidata-URIs)
--------------------- -----------------------------------------
-Normdaten            *siehe* <http://d-nb.info/gnd/4239774-1>
-Normdatei            <http://d-nb.info/gnd/4239774-1>
+-------------------- ---------------------------------------------------
 Dienst (Informatik)  <http://d-nb.info/gnd/4835035-7>
 Dienst (Architektur) <http://www.wikidata.org/entity/Q498386>
 Dienst (Schiffahrt)  <http://www.wikidata.org/entity/Q1220858>
 ...                  ...
--------------------- -----------------------------------------
+Normdatei            <http://d-nb.info/gnd/4239774-1>
+Normdaten            -- ($\Rightarrow$ <http://d-nb.info/gnd/4239774-1>)
+...                  ...
+-------------------- ---------------------------------------------------
 
 
-# Normdaten
+## Arten von Normdaten
 
-* Klassifikationen (z.B. Regensburger Verbundklassifikation, RVK)
-* Normdateien (z.B. Gemeinsame Normdatei, GND)
-* Thesauri (Standard-Thesaurus-Wirtschaft, STW)
+**Klassifikationen**\
+(z.B. Regensburger Verbundklassifikation, RVK)
 
-# Viele Normdaten!
+**Normdateien**\
+(z.B. Gemeinsame Normdatei, GND)
+
+**Thesauri**\
+(z.B. Standard-Thesaurus Wirtschaft, STW)
+
+
+## Arten von Wissensorganisationssystemen
+
+**Klassifikationen**\
+(z.B. Regensburger Verbundklassifikation, RVK)
+
+**Normdateien**\
+(z.B. Gemeinsame Normdatei, GND)
+
+**Thesauri**\
+(z.B. Standard-Thesaurus Wirtschaft, STW)
+
+
+## Sehr viele Wissensorganisationssysteme!
 
 * Lokale Bibliotheksystematiken
-* "Externe" systeme (Geonames, Wikidata...)
-* Fachterminologien
+* Fachspezifische Vokabulare
+* Listen von Klassen/Typen
 * ...
 
-# Datenformate for Normdaten
+![[BARTOC](http://bartoc.org/) listet (seit Ende 2013) bereits etwa 1.800](bartoc-logo.png)
 
-* MARC for ...
-* MARC for ...
-* MADS
-* SKOS
+## Viele Datenformate für Wissensorganisationssysteme
 
-Realität: Excel-Listen, Datensilos
+* MARC 21 
+  [for Authority](https://www.loc.gov/marc/authority/)/[for Classification](https://www.loc.gov/marc/classification/)
+* [Metadata and Authority Description Schema (MADS)](https://www.loc.gov/standards/mads/)
+* [ISO 25964 XML](http://www.niso.org/schemas/iso25964/schema-intro/)
+* Classification Markup Language (ClaML)
+* [Vocabulary Definition Exchange (VDEX)](https://www.imsglobal.org/vdex/)
+<!-- * [ZThes](http://zthes.z3950.org/) -->
+* [Simple Knowledge Organization System (SKOS)](https://www.w3.org/2004/02/skos/)
+* ...
 
-# Vorbilder aus dem deutschsprachigen Bibliothekswesen
+Realität:
+
+* Excel, CSV...
+* Word, PDF...
+* Irgendwelche Programme ohne Export ("Datensilos")
+
+# Normdaten-Dienste
+
+## Einige Anwendungsfälle für Normdatendienste
+
+* Übersicht über vorhandene Wissensorganisationssysteme
+* Grundlage für Verschlagwortung (manuelle & [semi]automische)
+* Gezielte Suche in Sammlungen (vgl. BEACON-Format)
+* Thematische Statistik von Sammlungen (Bestandsanalyse)
+* Mapping zwischen verschiedenene Systemen
+* ...
+
+## Vorbilder aus dem deutschsprachigen Bibliothekswesen
 
 * *Web Services for Economics*
   <http://zbw.eu/en/project/econ-ws>
@@ -63,7 +106,7 @@ Realität: Excel-Listen, Datensilos
 
 * lobid-API
 
-# Weitere Vorbilder aus dem Bibliothekswesen
+## Weitere Vorbilder aus dem Bibliothekswesen
 
 * LoC?
 * Finto
@@ -74,28 +117,44 @@ Realität: Excel-Listen, Datensilos
 
 # Einheitliche Normdatendienste der VZG
 
-Ziel: ...
-
-Mittel: ...
-
-# ...
+## Motivation/Ziel
 
 ...
 
-# Demo
+## Umsetzung/Mittel
 
-Screenshot
+* JSKOS
+* JSKOS-API
+* ...
 
-# Normdatendienste als Dienstleistung?
+## Anwendung
 
-**Dienstleistung**\
+*n-to-n* (hier Bild)
+
+## Der übliche gefakte Screenshot für den Bibtag
+
+*Screenshot*
+
+# Ausblick
+
+## Stand der Umsetzung und Planung
+
+* Spezifikation
+* Bereitstellung ausgewählter Vokabulare
+* Wrapper
+* Anwendung für Mapping ("Cocoda")
+* 
+
+## Normdatendienste als Dienstleistung?
+
+*Dienstleistung*\
 Erbringung einer Leistung zur Deckung eines immateriellen Bedarfs
 
 \noindent\rule{\textwidth}{0.4pt}
 
-Welcher Bedarf besteht an der\
-*Bereitstellung von Normdatendiensten*\
-durch die VZG?
+**Welcher Bedarf besteht,\
+z.B. an der Entwicklung, Bereitstellung, Beratung etc.\
+von Normdatendiensten?**
 
 \noindent\rule{\textwidth}{0.4pt}
 
@@ -104,7 +163,7 @@ DINI-AG KIM-Workshop am 5. April in Mannheim:
 
 <https://wiki.dnb.de/display/DINIAGKIM/KIM+WS+2016>
 
-# Weitere Informationen
+## Weitere Informationen
 
 Veröffentlichungen im Rahmen des **DFG-Projekt coli-conc**
 
@@ -120,11 +179,11 @@ Veröffentlichungen im Rahmen des **DFG-Projekt coli-conc**
   ([jskos-php-examples](http://jskos-php-examples.herokuapp.com),
    [skos2jskos](https://github.com/gbv/skos2jskos)...)
 
-# Begriffsklärung Normdatendienste
+## Begriffsklärung Normdatendienste
 
 Normdatendienst (Normen)
-  : z.B. EDIFACT-Normdatendienst der DIN
+  : EDIFACT-Normdatendienst der DIN
 
 Normdatendienst (Normdaten)
-  : z.B. Entity Facts
+  : im Sinne dieses Vortrags
 
