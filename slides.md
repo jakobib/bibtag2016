@@ -94,32 +94,23 @@ Bereistellung von **Normdaten-Funktionalität**\
 
 ## Vorbilder aus dem deutschsprachigen Bibliothekswesen
 
-* Web Services for Economics (ZBW)\
-  <http://zbw.eu/en/project/econ-ws>
-
-* lobid-API\
-  <https://lobid.org/api>
-
-* Entity Facts (DNB)\
-  <http://www.dnb.de/entityfacts>
+* [Web Services for Economics (ZBW)](http://zbw.eu/en/project/econ-ws)
+* [lobid-API (hbz)](https://lobid.org/api)
+* [Entity Facts (DNB)](http://www.dnb.de/entityfacts)
 
 ## Weitere Beispiele für Normdatendienste
 
 ### Internationales Bibliothekswesen
 
-* finto: Finnish thesaurus and ontology service\
-  <https://finto.fi/en/>
+* [finto: Finnish thesaurus and ontology service](https://finto.fi/en/)
+* [Library of Congress Linked Data Service](http://id.loc.gov/)
 
-* Library of Congress Linked Data Service\
-  <http://id.loc.gov/>
+### Blick über den Tellerrand
 
-### Blick über den Tellerrand...
+* [Wikidata](https://www.wikidata.org/) (indirekt)
 
-* Wikidata (indirekt)\
-  <http://www.wikidata.org/>
-
-* [**Vocabulary Services Interest Group**](https://rd-alliance.org/groups/interest-groups)\
-der [Research Data Alliance](https://rd-alliance.org/) (RDA)
+* [Vocabulary Services Interest Group](https://rd-alliance.org/groups/interest-groups)\
+der [Research Data Alliance (RDA)](https://rd-alliance.org/)
 
 
 # Einheitliche Normdatendienste der VZG
@@ -128,34 +119,51 @@ der [Research Data Alliance](https://rd-alliance.org/) (RDA)
 
 1. Konsolidierung von Normdaten innerhalb der VZG
 
-   zahlreiche Anwendungen vor allem im Bereich Digitaler Bibliotheken
-   (z.B. Museumsobjekte, KENOM etc.)    
+    $\Rightarrow$ vor allem im Bereich Digitaler Bibliotheken 
+     ([kuniweb-Museumserfassung](https://kuniweb.gbv.de/),
+      [kenom-Münzportal](http://www.kenom.de/))
 
-2. Mapping zwischen Normdateien (DDC-RVK u.A.)
+2. Mapping zwischen Normdateien
 
-   DFG-Projekt coli-conc
+    $\Rightarrow$ [DFG-Projekt coli-conc](https://coli-conc.gbv.de/)
+    (DDC$\leftrightarrow$RVK u.A.)
 
-## Umsetzung: JSKOS
+## Lösung
 
-* JSKOS: Einheitliches Datenformat for Normdaten
-  basierend auf JSON-LD
+Einheitliche Verarbeitung von Normdaten in (Web)anwendungen
 
-*Kein Austauschformat* sondern Zugriffsformat
-
+<!--
+Normdaten -> JSKOS -> Anwendungen
 *n-to-n* (hier Bild)
 
-## Umsetzung: JSKOS-API
 
-* JSKOS-API
-
-## Umsetzung: Entwicklung
+% *Kein Austauschformat* sondern Zugriffsformat
 
 * Software zur Verarbeitung von Normdaten im JSKOS-Format
   ...ng-skos (client)...
+-->
 
-* Erstellung von Wrappern
+![](via-jskos.png)
 
-* Erweiterung vorhandener Normdaten-Software
+
+## Umsetzung: JSKOS & JSKOS-API
+
+JSKOS
+  : Einheitliches Datenformat for Normdaten,\
+    basierend auf JSON-LD und SKOS
+
+JSKOS-API
+  : Webservice-Spezifikation\
+    zum Zugriff auf Normdaten
+
+`http://example.org/` **`?prefLabel=Normdaten`**
+
+~~~json
+{
+  "prefLabel": { "de": "Normdatei" },
+  "uri": "http://d-nb.info/gnd/4239774-1"
+}
+~~~
 
 ## Ein gefakter Screenshot muss reichen
 
@@ -164,12 +172,23 @@ der [Research Data Alliance](https://rd-alliance.org/) (RDA)
 
 # Ausblick
 
-## Stand der Umsetzung und Planung
+## Umsetzung
 
-* Spezifikation
-* Bereitstellung ausgewählter Vokabulare
-* Wrapper
-* Anwendung für Mapping ("Cocoda")
+1. Spezifikation
+    - JSKOS ([Version 0.1.0](https://gbv.github.io/jskos/)),
+      JSKOS-API (April)
+
+2. Implementierung als Open Source ([PHP](https://github.com/gbv/jskos-php), 
+   Java, [JavaScript](https://github.com/gbv/ng-skos))
+    
+3. Bereitstellung ausgewählter Vokabulare
+    - DDC, RVK, GND, Wikidata...
+
+4. Wrapper & Erweiterung vorhandener Normdatendienste
+    - <https://jskos-php-examples.herokuapp.com/>
+
+5. Anwendung für Mapping
+    - Webanwendung "Cocoda"
 
 ## Normdatendienste als Dienstleistung?
 
@@ -206,7 +225,7 @@ Veröffentlichungen im Rahmen des **DFG-Projekt coli-conc**
   ([jskos-php-examples](http://jskos-php-examples.herokuapp.com),
    [skos2jskos](https://github.com/gbv/skos2jskos)...)
 
-## Begriffsklärung Normdatendienste
+## Nachtrag: Begriffsklärung Normdatendienste
 
 Normdatendienst (Normen)
   : EDIFACT-Normdatendienst der DIN
@@ -214,3 +233,4 @@ Normdatendienst (Normen)
 Normdatendienst (Normdaten)
   : im Sinne dieses Vortrags
 
+> Mag jemand "Normdatendienst" in der GND anlegen?
