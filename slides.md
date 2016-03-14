@@ -1,6 +1,6 @@
 ---
 title: Einheitliche Normdatendienste der VZG
-author: Jakob Voß
+author: Jakob Voß, Tobias Helms
 date: 2016-03-14
 place: Bibliothekskongress, Leipzig
 institute: Verbunzentrale des GBV (VZG)
@@ -83,15 +83,6 @@ Bereistellung von **Normdaten-Funktionalität**\
 * Bearbeitung von...
 * ...
 
-## Anwendungsfälle für Normdatendienste
-
-* Übersicht über vorhandene Wissensorganisationssysteme
-* Grundlage für Verschlagwortung (manuell & automisch)
-* Gezielte Suche in Sammlungen (vgl. BEACON-Format)
-* Thematische Statistik von Sammlungen (Bestandsanalyse)
-* Mapping zwischen verschiedenene Systemen
-* ...
-
 ## Vorbilder aus dem deutschsprachigen Bibliothekswesen
 
 * [Web Services for Economics (ZBW)](http://zbw.eu/en/project/econ-ws)
@@ -112,6 +103,14 @@ Bereistellung von **Normdaten-Funktionalität**\
 * [Vocabulary Services Interest Group](https://rd-alliance.org/groups/interest-groups)\
 der [Research Data Alliance (RDA)](https://rd-alliance.org/)
 
+## Anwendungsfälle für Normdatendienste
+
+* Übersicht über vorhandene Wissensorganisationssysteme
+* Grundlage für Verschlagwortung (manuell & automisch)
+* Gezielte Suche in Sammlungen (vgl. BEACON-Format)
+* Thematische Statistik von Sammlungen (Bestandsanalyse)
+* Mapping zwischen verschiedenene Systemen
+* ...
 
 # Einheitliche Normdatendienste der VZG
 
@@ -123,10 +122,25 @@ der [Research Data Alliance (RDA)](https://rd-alliance.org/)
      ([kuniweb-Museumserfassung](https://kuniweb.gbv.de/),
       [kenom-Münzportal](http://www.kenom.de/))
 
+Gemeinsame Normdatei, GeoNames, Bayerische Oberbegriffsdatei, Hessische
+Systematik, Ortsangaben des Bundesamtes für Kartographie und Geodäsie, Arts &
+Architecture Thesarus, Online Coins of the Roman Empire, Coinage of the Roman
+Republic Online... 
+
+## Motivation
+
 2. Mapping zwischen Normdateien
 
     $\Rightarrow$ [DFG-Projekt coli-conc](https://coli-conc.gbv.de/)
     (DDC$\leftrightarrow$RVK u.A.)
+
+"Es wid für wünschenswert erklärt, *daß die bestehenden und künftigen
+Klassifikationssysteme durch ein gemeinsames Hilfsmittel untereinander in
+Beziehung gesetzt und daß Konkordanzen zwischen den angewandten Systemen und
+dem Hilfssystem hergestellt werden.*"
+
+--- Paul Schwenke 1910 über den *Kongress für Bibliographie und
+Dokumentation* unter der Leitung von Lafontaine und Otlet
 
 ## Lösung
 
