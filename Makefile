@@ -4,3 +4,6 @@ SLIDES_OPTS += --slide-level 2 -t beamer -V documentclass=beamer
 
 slides.pdf: slides.md $(SLIDES_TEMPLATE)
 	pandoc -s -S $(SLIDES_OPTS) -o $@ $<
+
+slides-v2.pdf: slides-v2.md $(SLIDES_TEMPLATE)
+	pandoc -s -S $(SLIDES_OPTS) -o $@ $<
