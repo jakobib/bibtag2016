@@ -1,7 +1,8 @@
 ---
 title: Einheitliche Normdatendienste der VZG
 subtitle: Entwicklungsstand & Planungen
-author: Jakob Voß
+author: 
+  - name: Jakob Voß
 date: 2016-06-01
 place: Verbundzentrale des GBV (VZG)
 ...

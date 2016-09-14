@@ -16,7 +16,11 @@ $if(colortheme)$
 \usecolortheme{$colortheme$}
 $endif$
 
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 \usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,matrix}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -101,8 +105,8 @@ $endif$
         {\footnotesize 
             $if(shorttitle)$$shorttitle$$else$$title$$endif$$if(date)$, $date$$endif$
         };
-    \node[anchor=east,text=white,yshift=-31.5mm] at (current page.east) 
-        {\scriptsize \insertframenumber};
+%    \node[anchor=east,text=white,yshift=-31.5mm] at (current page.east) 
+%        {\scriptsize \insertframenumber};
   \end{tikzpicture}
 }
 \addtobeamertemplate{title page}{
@@ -119,6 +123,10 @@ $endif$
 \setbeamercolor{subtitle}{fg=black}
 \setbeamercolor{author}{fg=VZGblau}
 \setbeamercolor{date}{fg=VZGblau}
+
+% to support begin/end sections with Pandoc syntax
+\let\pandocbegin\begin
+\let\pandocend\end
 
 % Comment these out if you don't want a slide with just the
 % part/section/subsection/subsubsection title:
@@ -152,7 +160,7 @@ $if(title)$\title{$title$}$endif$
 $if(subtitle)$\subtitle{$subtitle$}$endif$
 $if(institute)$\institute{$institute$}$endif$
 $if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+\author{$for(author)$$author.name$$sep$ \and $endfor$}
 $endif$
 $if(date)$
 \date{$if(place)$$place$, $endif$$date$}
@@ -160,6 +168,9 @@ $endif$
 
 % remove navigation bar
 \setbeamertemplate{navigation symbols}{}
+
+% bottom margin
+\setbeamertemplate{footline}{\vspace{8mm}}
 
 \begin{document}
 
@@ -189,4 +200,5 @@ $endif$
 $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 $endif$
+
 \end{document}

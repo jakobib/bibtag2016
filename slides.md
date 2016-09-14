@@ -1,6 +1,8 @@
 ---
 title: Einheitliche Normdatendienste der VZG
-author: Jakob Voß, Tobias Helms
+author: 
+  - name: Jakob Voß
+  - name: Tobias Helms
 date: 2016-03-14
 place: Bibliothekskongress, Leipzig
 institute: Verbundzentrale des GBV (VZG)
